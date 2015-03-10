@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'omniauth-facebook'
 gem 'figaro'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'byebug'
