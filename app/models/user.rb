@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
       user = User.create(
         provider: auth.provider,
         uid:      auth.uid,
-        name:     auth.info.name)
+        name:     auth.info.name,
+        email:    auth.info.email)
       end
     user
   end
