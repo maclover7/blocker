@@ -1,0 +1,22 @@
+<h1>Welcome to Mission Control!</h1>
+
+<p>There are currently <%= @user_count %> supporters!</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID #</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
