@@ -10,8 +10,12 @@
       <p>To sign the petition to support block scheduling, all you have to do is login with Facebook below.</p>
 
       <% if current_user %>
-        <h1>Thanks for supporting us, <%= current_user.name %>!</h1>
-        <p><%= link_to "Sign out", signout_path, class: "btn btn-primary btn-lg" %></p>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h3>Thanks for supporting us, <%= current_user.name %>!</h3>
+            <p><%= link_to "Sign out", signout_path, class: "btn btn-primary btn-lg" %></p>
+          </div>
+        </div>
       <% else %>
         <%= link_to "Sign in with Facebook", "/auth/facebook", class: "btn btn-primary btn-lg" %>
       <% end %>
