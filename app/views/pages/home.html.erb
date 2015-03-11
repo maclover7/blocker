@@ -1,10 +1,61 @@
-<div class="container">
-  <% if current_user %>
-    <h1>Thanks for supporting us, <%= current_user.name %>!</h1>
-    <p><%= link_to "Sign out", signout_path %></p>
+<br />
+<div class="jumbotron">
+  <div class="container">
+    <h1>Help Support Block Scheduling</h1>
 
-  <% else %>
-    <%= link_to "Sign in with Facebook", "/auth/facebook" %>
+    <br />
 
-<% end %>
+    <div class="fb">
+
+      <p>To sign the petition to support block scheduling, all you have to do is login with Facebook below.</p>
+
+      <% if current_user %>
+        <h1>Thanks for supporting us, <%= current_user.name %>!</h1>
+        <p><%= link_to "Sign out", signout_path, class: "btn btn-primary btn-lg" %></p>
+      <% else %>
+        <%= link_to "Sign in with Facebook", "/auth/facebook", class: "btn btn-primary btn-lg" %>
+      <% end %>
+    </div>
+
+    <br />
+
+    <div class="center">
+      <h3>From Amy Nadel:</h3>
+      <p>
+        So Julia and I are really serious about fighting for block scheduling for the upcoming school year or the year after that. We are reaching out to the Student Life Subcommittee, Student Liaison, superintendent, individual Board of Education members, and are planning to attend a Board of Education meeting in the near future. We’ve decided to create a petition, and we want all your signatures (for the people who are pro-block scheduling). We are proposing an 8-day block schedule with 6 periods each day (53 minutes each), 4 minutes between classes, 4 minute homeroom, 25 minute lunch, and a class-lab (87 minutes) in the middle of the day.
+        Please sign in with Facebook above if you would like your name on the petition (meaning you are in favor of block scheduling) or message Julia or I privately on Facebook. But to be fair we’ve created a list of both the pros and cons of having block scheduling:
+      </p>
+    </div>
+
+    <br />
+
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="center">Pro:</h2>
+        <ul>
+          <li>maximum of 4 subjects of homework per day</li>
+          <li>more free time (for extra curriculars and sleep)</li>
+          <li>overall happier and less stressed students</li>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <h2 class="center">Con:</h2>
+        <ul>
+          <li>longer periods (by 10 min if they are 53 min periods, 1 lab-class per day 87 min)</li>
+          <li>more work for the administration/BoE to organize and execute</li>
+          <li>may need assigned test/quiz days for specific subjects</li>
+        </ul>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="final">
+      <h3>Join <%= @user_count %> other students and help support block scheduling:</h3>
+      <%= link_to "Sign in with Facebook", "/auth/facebook", class: "btn btn-primary btn-lg" %>
+    </div>
+
+  </div>
 </div>
+
