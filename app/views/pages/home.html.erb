@@ -18,6 +18,7 @@
         </div>
       <% else %>
         <%= link_to "Sign in with Facebook", "/auth/facebook", class: "btn btn-primary btn-lg" %>
+        <%= link_to "Sign in with Google", "/auth/google_oauth2", class: "btn btn-primary btn-lg" %>
       <% end %>
     </div>
 
@@ -58,6 +59,7 @@
     <div class="final">
       <h3>Join <%= @user_count %> other students and help support block scheduling:</h3>
       <%= link_to "Sign in with Facebook", "/auth/facebook", class: "btn btn-primary btn-lg" %>
+      <%= link_to "Sign in with Google", "/auth/google_oauth2", class: "btn btn-primary btn-lg" %>
     </div>
 
   </div>
